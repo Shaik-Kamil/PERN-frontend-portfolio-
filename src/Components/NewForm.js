@@ -55,7 +55,7 @@ const NewForm = () => {
           value={game.genre}
           onChange={handleTextChange}
         />
-        <label htmlFor="release_date">release_date:</label>
+        <label htmlFor="release_date">release date:</label>
         <input
           id="release_date"
           type="text"
@@ -69,6 +69,20 @@ const NewForm = () => {
           type="checkbox"
           min="0"
           value={game.is_favorite}
+          onChange={handleTextChange}
+        />
+        <label htmlFor="ratings">Ratings:</label>
+        <input
+          id="ratings"
+          type="text"
+          value={game.ratings}
+          onChange={handleTextChange}
+        />
+        <label htmlFor="publisher">Publisher:</label>
+        <input
+          id="publisher"
+          type="text"
+          value={game.publisher}
           onChange={handleTextChange}
         />
         <label htmlFor="url">Image:</label>

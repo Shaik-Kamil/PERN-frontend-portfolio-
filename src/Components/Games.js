@@ -1,7 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Game from './Game';
+import axios from 'axios';
+const API = process.env.REACT_APP_API_URL;
+
 const Games = () => {
-  return <div></div>;
+  const [games, setGames] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`${API}/games`)
+      .then((res) => {
+        setGames(res.data);
+      })
+      .catch((err) => {
+        console.warn('catch', err);
+      });
+  }, []);
+  return (
+    <div>
+      {games.map((game) => {
+        return <Game key={game.id} game={game} />;
+      })}
+    </div>
+  );
 };
 
 export default Games;
