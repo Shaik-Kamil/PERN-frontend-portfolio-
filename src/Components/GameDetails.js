@@ -10,7 +10,7 @@ const GameDetails = () => {
 
   const deleteGame = () => {
     axios
-      .delete(`${API}/games]${id}`)
+      .delete(`${API}/games/${id}`)
       .then(() => {
         navigate(`/games`);
       })

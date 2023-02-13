@@ -9,13 +9,14 @@ const NewForm = () => {
     title: '',
     genre: '',
     release_date: '',
-    is_favorite: '',
+    is_favorite: false,
     ratings: '',
     publisher: '',
-    image: '',
+    image: 'https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image',
   });
 
   const addGame = (newGame) => {
+    console.log(newGame);
     axios
       .post(`${API}/games`, newGame)
       .then(
@@ -51,7 +52,6 @@ const NewForm = () => {
         <input
           id="genre"
           type="text"
-          min="0"
           value={game.genre}
           onChange={handleTextChange}
         />
@@ -59,7 +59,6 @@ const NewForm = () => {
         <input
           id="release_date"
           type="text"
-          min="0"
           value={game.release_date}
           onChange={handleTextChange}
         />
@@ -67,7 +66,6 @@ const NewForm = () => {
         <input
           id="is_favorite"
           type="checkbox"
-          min="0"
           value={game.is_favorite}
           onChange={handleTextChange}
         />

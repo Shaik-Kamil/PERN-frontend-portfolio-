@@ -16,9 +16,9 @@ const EditForm = () => {
     publisher: '',
     image: '',
   });
-  const updateGame = (updatedGame) => {
+  const updateGame = (game) => {
     axios
-      .put(`${API}/games/${id}`, updatedGame)
+      .put(`${API}/games/${id}`, game)
       .then(() => {
         navigate(`/games/${id}`);
       })
@@ -34,6 +34,15 @@ const EditForm = () => {
     event.preventDefault();
     updateGame(game);
   };
+
+  useEffect(() => {
+    axios
+      .get(`${API}/games/${id}`)
+      .then((res) => {
+        setGame(res.data);
+      })
+      .catch((error) => navigate(`/not-found`));
+  }, [id]);
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -50,7 +59,6 @@ const EditForm = () => {
         <input
           id="genre"
           type="text"
-          min="0"
           value={game.genre}
           onChange={handleTextChange}
         />
@@ -58,7 +66,6 @@ const EditForm = () => {
         <input
           id="release_date"
           type="text"
-          min="0"
           value={game.release_date}
           onChange={handleTextChange}
         />
@@ -66,7 +73,6 @@ const EditForm = () => {
         <input
           id="is_favorite"
           type="checkbox"
-          min="0"
           value={game.is_favorite}
           onChange={handleCheckboxChange}
         />
