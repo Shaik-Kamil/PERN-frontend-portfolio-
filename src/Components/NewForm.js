@@ -12,8 +12,7 @@ const NewForm = () => {
     is_favorite: false,
     ratings: '',
     publisher: '',
-    image:
-      'https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg',
+    image: 'https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image',
   });
 
   const addGame = (newGame) => {
@@ -124,7 +123,7 @@ const NewForm = () => {
             type="submit"
           />
           <Link to={`/games/`}>
-            <button className="block bg-cyan-200 p-3 mt-3 rounded-md">
+            <button className="block bg-cyan-200 p-3 mt-3 rounded">
               Cancel
             </button>
           </Link>

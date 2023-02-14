@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 
 const Game = ({ game }) => {
   return (
-    <div className=" ">
+    <div>
       <div>
         <Link to={`/games/${game.id}`}>
-          <h2>{game.title}</h2>
+          <h1 className="text-2xl text-purple-900">{game.title}</h1>
         </Link>
-        <img className="w-96 h-50" src={game.image} alt={game.title} />
+        <Link to={`/games/${game.id}`}>
+          <img className="w-96 h-72" src={game.image} alt={game.title} />
+        </Link>
       </div>
     </div>
   );

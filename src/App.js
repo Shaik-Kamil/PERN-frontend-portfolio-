@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Nav from './Components/Nav';
+import Footer from './Components/Footer';
 import Home from './Pages/Home';
 import Index from './Pages/Index';
 import New from './Pages/New';
@@ -21,6 +22,7 @@ function App() {
           <Route path="/games/:id/edit" element={<Edit />} />
           <Route path="/error" element={<Error />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );
