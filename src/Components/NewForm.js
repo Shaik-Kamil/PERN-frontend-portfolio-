@@ -12,7 +12,8 @@ const NewForm = () => {
     is_favorite: false,
     ratings: '',
     publisher: '',
-    image: 'https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image',
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg',
   });
 
   const addGame = (newGame) => {
@@ -37,10 +38,13 @@ const NewForm = () => {
     addGame(game);
   };
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="title">Title:</label>
+    <div className="flex m-auto w-2/5">
+      <form className="bg-rose-200 p-10 rounded w-full" onSubmit={handleSubmit}>
+        <label className="block font-bold mb-2" htmlFor="title">
+          Title:
+        </label>
         <input
+          className="appearance-none rounded w-full py-2 px-3 leading-tight"
           id="title"
           type="text"
           value={game.title}
@@ -48,43 +52,64 @@ const NewForm = () => {
           placeholder="Name of Game"
           required
         />
-        <label htmlFor="genre">genre:</label>
+        <label className="block font-bold mb-2" htmlFor="genre">
+          genre:
+        </label>
         <input
+          className="appearance-none rounded w-full py-2 px-3 leading-tight"
           id="genre"
           type="text"
           value={game.genre}
           onChange={handleTextChange}
         />
-        <label htmlFor="release_date">release date:</label>
+        <label className="block font-bold mb-2" htmlFor="release_date">
+          release date:
+        </label>
         <input
+          className="appearance-none rounded w-full py-2 px-3 leading-tight"
           id="release_date"
           type="text"
           value={game.release_date}
           onChange={handleTextChange}
         />
-        <label htmlFor="is_favorite">Favorite:</label>
+        <div className="py-4">
+          <label className="font-bold my-10" htmlFor="is_favorite">
+            Favorite:
+          </label>
+          <input
+            className="rounded"
+            id="is_favorite"
+            type="checkbox"
+            value={game.is_favorite}
+            onChange={handleTextChange}
+          />
+        </div>
+
+        <label className="block font-bold mb-2" htmlFor="ratings">
+          Ratings:
+        </label>
         <input
-          id="is_favorite"
-          type="checkbox"
-          value={game.is_favorite}
-          onChange={handleTextChange}
-        />
-        <label htmlFor="ratings">Ratings:</label>
-        <input
+          className="appearance-none rounded w-full py-2 px-3 leading-tight"
           id="ratings"
           type="text"
           value={game.ratings}
           onChange={handleTextChange}
         />
-        <label htmlFor="publisher">Publisher:</label>
+        <label className="block font-bold mb-2" htmlFor="publisher">
+          Publisher:
+        </label>
         <input
+          className="appearance-none rounded w-full py-2 px-3 leading-tight"
           id="publisher"
           type="text"
           value={game.publisher}
           onChange={handleTextChange}
         />
-        <label htmlFor="url">Image:</label>
+        <label className="block font-bold mb-2" htmlFor="url">
+          Image:
+        </label>
         <input
+          className="appearance-none rounded w-full py-2 px-3 leading-tight"
           id="image"
           type="text"
           pattern="http[s]*://.+"
@@ -93,11 +118,18 @@ const NewForm = () => {
           onChange={handleTextChange}
         />
         <br />
-        <input type="submit" />
+        <div className="flex justify-around">
+          <input
+            className="block bg-cyan-200 p-3 mt-3 rounded-md"
+            type="submit"
+          />
+          <Link to={`/games/`}>
+            <button className="block bg-cyan-200 p-3 mt-3 rounded-md">
+              Cancel
+            </button>
+          </Link>
+        </div>
       </form>
-      <Link to={`/games/`}>
-        <button>Back</button>
-      </Link>
     </div>
   );
 };

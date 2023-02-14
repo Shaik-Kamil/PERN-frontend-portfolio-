@@ -26,25 +26,38 @@ const GameDetails = () => {
       .catch((err) => console.warn(err));
   }, [id]);
   return (
-    <article>
-      Title:{game.title}
-      <img src={game.image} alt={game.title} />
-      Genre: {game.genre}
-      Release Date: {game.release_date}
-      Rating: {game.ratings}
-      Publisher: {game.publisher}
-      <div>
-        <Link to={`/games`}>
-          <button>Back</button>
-        </Link>
-      </div>
-      <div>
-        <Link to={`/games/${id}/edit`}>
-          <button>Edit</button>
-        </Link>
-      </div>
-      <div>
-        <button onClick={deleteGame}>Delete</button>
+    <article className="flex gap-4 ">
+      <img className="w-[500px] ml-4" src={game.image} alt={game.title} />
+      <div className="">
+        <h3> Title: {game.title}</h3>
+        <h4> Genre: {game.genre}</h4>
+        <h4> Release Date: {game.release_date}</h4>
+        <h4> Rating: {game.ratings}</h4>
+        <h4>Publisher: {game.publisher}</h4>
+        <div className="flex mt-4">
+          <div className="m-3">
+            <Link to={`/games`}>
+              <button className="bg-blue-700 hover:bg-blue-400 text-white py-2 px-4 rounded-md">
+                Back
+              </button>
+            </Link>
+          </div>
+          <div className="m-3">
+            <Link to={`/games/${id}/edit`}>
+              <button className="bg-blue-700  hover:bg-blue-400 text-white py-2 px-5 rounded-md">
+                Edit
+              </button>
+            </Link>
+          </div>
+          <div>
+            <button
+              className="bg-blue-700  hover:bg-blue-400 text-white p-2 m-3 rounded-md"
+              onClick={deleteGame}
+            >
+              Delete
+            </button>
+          </div>
+        </div>
       </div>
     </article>
   );

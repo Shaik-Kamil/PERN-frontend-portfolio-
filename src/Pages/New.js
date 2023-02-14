@@ -2,8 +2,8 @@ import React from 'react';
 import NewForm from '../Components/NewForm';
 const New = () => {
   return (
-    <div>
-      <h3>Add a Game to collection</h3>
+    <div className="flex flex-col items-center p-4">
+      <h3 className="mb-3">Add a Game to collection</h3>
       <NewForm />
     </div>
   );

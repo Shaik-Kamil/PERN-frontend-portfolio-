@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##Games collection deployed backend link
+[deployed-backend](https://games-list-backend.onrender.com/)
 
 ## Available Scripts
 

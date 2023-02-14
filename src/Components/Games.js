@@ -17,7 +17,7 @@ const Games = () => {
       });
   }, []);
   return (
-    <div>
+    <div className="flex flex-wrap gap-4 m-4">
       {games.map((game) => {
         return <Game key={game.id} game={game} />;
       })}
