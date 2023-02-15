@@ -14,7 +14,7 @@ const Footer = () => {
             rel="noreferrer"
             className="px-4 text-2xl text-white-500"
           >
-            <AiFillLinkedin />
+            <AiFillLinkedin className="hover:bg-red-800" />
           </a>
           <a
             href="https://github.com/Shaik-Kamil"
@@ -22,7 +22,7 @@ const Footer = () => {
             rel="noreferrer"
             className="px-4 text-2xl text-white-200"
           >
-            <FaGithubSquare />
+            <FaGithubSquare className="hover:bg-red-800" />
           </a>
           <a
             href="mailto: shaikkamil@pursuit.org"
@@ -30,7 +30,7 @@ const Footer = () => {
             rel="noreferrer"
             className="px-4 text-2xl text-white-500"
           >
-            <SiGmail />
+            <SiGmail className="hover:bg-red-800" />
           </a>
         </div>
       </div>

@@ -7,6 +7,9 @@ const Nav = () => {
         <Link to="/">Home</Link>
       </h2>
       <h3 className="font-signature ">
+        <Link to="/shaik">About Me</Link>
+      </h3>
+      <h3 className="font-signature ">
         <Link to="/games">Games</Link>
       </h3>
       <button className="font-signature ">
