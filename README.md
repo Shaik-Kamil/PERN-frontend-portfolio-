@@ -23,7 +23,6 @@ In the event that the deployed application on netlify is not working or availabl
 > **Note**:your .env file must contain the same port as you have listed in the backend for this project. For example, if your backend port is 3003, your frontend .env file should be `REACT_APP_API_URL=http://localhost:3003` as well. Please make sure to check if both are the same.
 
 4. Once you have installed all dependencies, type `npm start` on the command line to start the application in localhost.
-   > Open] (http://localhost:3000) to view it in your browser.
 
 ### `User Stories`
 
