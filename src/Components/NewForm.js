@@ -16,7 +16,6 @@ const NewForm = () => {
   });
 
   const addGame = (newGame) => {
-    console.log(newGame);
     axios
       .post(`${API}/games`, newGame)
       .then(

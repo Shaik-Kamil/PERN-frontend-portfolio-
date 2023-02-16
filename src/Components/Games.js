@@ -15,7 +15,7 @@ const Games = () => {
       .catch((err) => {
         console.warn('catch', err);
       });
-  }, []);
+  }, [games.length]);
   return (
     <div className="flex flex-wrap gap-4 m-4">
       {games.map((game) => {
