@@ -11,6 +11,8 @@
 ## backend repo
 
 [backend repo](https://github.com/Shaik-Kamil/PERN-backend-portfolio)
+
+## frontend repo
 [frontend rep](https://github.com/Shaik-Kamil/PERN-frontend-portfolio-)
 
 # `Games Collection App`
