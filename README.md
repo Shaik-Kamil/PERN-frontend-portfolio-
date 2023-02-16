@@ -8,6 +8,10 @@
 
 [deployed-frontend](https://games-connoisseur.netlify.app)
 
+## backend repo
+
+[backend repo](https://github.com/Shaik-Kamil/PERN-backend-portfolio)
+
 # `Games Collection App`
 
 This CRUD application uses react for the frontend to display the data and uses postGres on the backend to store the data on the backend server and is uses tailwindCSS for the styling. This is my portfolio project to add/maintain a personal collection of game.
