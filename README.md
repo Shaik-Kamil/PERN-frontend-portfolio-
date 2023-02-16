@@ -10,7 +10,7 @@
 
 # `Games Collection App`
 
-This CRUD application uses react for the frontend to display the data and uses postGres on the backend to store the data on the backend server and is uses tailwindCSS for the styling. This is my portfolio project to add/maintain a personal collection of game. 
+This CRUD application uses react for the frontend to display the data and uses postGres on the backend to store the data on the backend server and is uses tailwindCSS for the styling. This is my portfolio project to add/maintain a personal collection of game.
 
 ## `Instructions`
 
@@ -20,8 +20,10 @@ In the event that the deployed application on netlify is not working or availabl
 2. in the terminal for this repo run`npm i`to install all dependencies.
 3. Create an .env file and Once there, paste this in `REACT_APP_API_URL=http://localhost:`inside the .env.
 
-> **Note**:your .env file must contain the same port as you have listed in the backend for this project. For example, if your backend port is 3003, your frontend .env file should be `REACT_APP_API_URL=http://localhost:3003` as well. Please make sure to check if both are the same. 4. Once you have installed all dependencies, type `npm start` on the command line to start the application in localhost.
-> Open] (http://localhost:3000) to view it in your browser.
+> **Note**:your .env file must contain the same port as you have listed in the backend for this project. For example, if your backend port is 3003, your frontend .env file should be `REACT_APP_API_URL=http://localhost:3003` as well. Please make sure to check if both are the same.
+
+4. Once you have installed all dependencies, type `npm start` on the command line to start the application in localhost.
+   > Open] (http://localhost:3000) to view it in your browser.
 
 ### `User Stories`
 
